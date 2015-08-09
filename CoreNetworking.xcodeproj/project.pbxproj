@@ -20,8 +20,8 @@
 		530911790F646BAA00525632 /* AFNetwork-Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 530911770F646BAA00525632 /* AFNetwork-Constants.m */; };
 		5309117C0F646BAA00525632 /* AFNetwork-Constants.h in Headers */ = {isa = PBXBuildFile; fileRef = 530911760F646BAA00525632 /* AFNetwork-Constants.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5309117D0F646BAA00525632 /* AFNetwork-Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 530911770F646BAA00525632 /* AFNetwork-Constants.m */; };
-		530F7EEF1A27A0B2002FAB5B /* AFNetworkConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 530F7EED1A27A0B2002FAB5B /* AFNetworkConnection.h */; };
-		530F7EF01A27A0B2002FAB5B /* AFNetworkConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 530F7EED1A27A0B2002FAB5B /* AFNetworkConnection.h */; };
+		530F7EEF1A27A0B2002FAB5B /* AFNetworkConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 530F7EED1A27A0B2002FAB5B /* AFNetworkConnection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		530F7EF01A27A0B2002FAB5B /* AFNetworkConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 530F7EED1A27A0B2002FAB5B /* AFNetworkConnection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		530F7EF11A27A0B2002FAB5B /* AFNetworkConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 530F7EEE1A27A0B2002FAB5B /* AFNetworkConnection.m */; };
 		530F7EF21A27A0B2002FAB5B /* AFNetworkConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 530F7EEE1A27A0B2002FAB5B /* AFNetworkConnection.m */; };
 		5313CE56176E656100B741AE /* AFNetworkSocketOption.h in Headers */ = {isa = PBXBuildFile; fileRef = 5313CE54176E656100B741AE /* AFNetworkSocketOption.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -846,7 +846,8 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 0610;
+				LastTestingUpgradeCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Keith Duncan";
 			};
 			buildConfigurationList = 5343E6FE0C21FB1000B63E6E /* Build configuration list for PBXProject "CoreNetworking" */;
