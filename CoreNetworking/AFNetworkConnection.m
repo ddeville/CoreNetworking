@@ -22,17 +22,13 @@
 
 + (AFNetworkInternetTransportSignature)transportSignatureForScheme:(NSString *)scheme {
 	@throw [NSException exceptionWithName:NSInvalidArgumentException reason:[NSString stringWithFormat:@"%s, cannot provide an AFNetworkInternetTransportSignature for scheme (%@)", __PRETTY_FUNCTION__, scheme] userInfo:nil];
-	
-	AFNetworkInternetTransportSignature signature = {};
-	return signature;
 }
 
 + (NSString *)serviceDiscoveryType {
 	@throw [NSException exceptionWithName:NSInternalInconsistencyException reason:[NSString stringWithFormat:@"%s, connot provide a service discovery type", __PRETTY_FUNCTION__] userInfo:nil];
-	return nil;
 }
 
-- (id <AFNetworkConnectionLayer>)initWithURL:(NSURL *)endpoint {
+- (id)initWithURL:(NSURL *)endpoint {
 	CFHostRef host = (CFHostRef)[NSMakeCollectable(CFHostCreateWithName(kCFAllocatorDefault, (CFStringRef)[endpoint host])) autorelease];
 	
 	AFNetworkInternetTransportSignature transportSignature = [[self class] transportSignatureForScheme:[endpoint scheme]];
@@ -46,10 +42,10 @@
 		.transport = transportSignature,
 	};
 	
-	return (id)[self initWithTransportSignature:&hostSignature];
+	return [self initWithTransportSignature:&hostSignature];
 }
 
-- (id <AFNetworkConnectionLayer>)initWithService:(AFNetworkServiceScope *)serviceScope {
+- (id)initWithService:(AFNetworkServiceScope *)serviceScope {
 	CFNetServiceRef netService = (CFNetServiceRef)[NSMakeCollectable(CFNetServiceCreate(kCFAllocatorDefault, (CFStringRef)[serviceScope domain], (CFStringRef)[serviceScope type], (CFStringRef)[serviceScope name], 0)) autorelease];
 	
 	AFNetworkServiceSignature serviceSignature = {
@@ -57,10 +53,6 @@
 	};
 	
 	return (id)[self initWithTransportSignature:&serviceSignature];
-}
-
-- (AFNetworkLayer <AFNetworkConnectionLayer> *)lowerLayer {
-	return (AFNetworkLayer <AFNetworkConnectionLayer> *)[super lowerLayer];
 }
 
 - (NSURL *)peer {
